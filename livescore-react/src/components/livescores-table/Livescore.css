@@ -1,20 +1,23 @@
 .livescore {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(173, 199, 195);
+    /* background-color: gainsboro; */
     border-style: solid;
-    border-width: medium;
-    border-radius: 10px;; 
+    border-width: thin;
+    border-radius: 7px;; 
     margin-left: 5%;
     margin-right: 5%;
 }
 
+
 .container{
     width: 30%;
     text-align: center;
+    margin-top: 15px;
 }
 
 .time {
     width: 3%;
     text-align: right;
+    margin-top: 15px;
 }

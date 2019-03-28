@@ -1,0 +1,14 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    background-color: #f1f1;
+    box-shadow: 0 5px 0 rgb(0, 78, 59);
+    color: rgb(0, 0, 0);
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}

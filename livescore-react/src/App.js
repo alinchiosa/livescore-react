@@ -6,6 +6,7 @@ import Livescores from "./components/livescores-table/Livescores";
 import Fixtures from "./components/fixtures-component/Fixtures";
 import History from "./components/history-component/History";
 import Leagues from "./components/leagues-component/Leagues";
+import Footer from "./components/footer-component/Footer";
 import './App.css';
 
 class App extends Component {
@@ -23,9 +24,10 @@ class App extends Component {
               <Route path="/history" component={History} />
               <Route path="/fixtures" component={Fixtures} />
               {/* <Route component={Error} /> */}
-          </Switch>
+            </Switch>
           </div>
         </div>
+        <Footer />
       </BrowserRouter>
     );
   }

@@ -1,0 +1,13 @@
+.main{
+    display: flex;
+    
+}
+
+.leagues{
+    width: 10%;
+    margin-left: 2%;
+}
+
+.page{
+    width: 90%;
+}

@@ -22,14 +22,19 @@ class Livescores extends React.Component {
     }
 
     render(){
-        const livescoresComponents = this.state.livescores.map(match => 
-            <Livescore key={match.id} match={match} />
-        )
-        return(
-            <div>
-                {livescoresComponents}
-            </div>
-        );
+
+        if (!this.state.isLoaded){
+            return <div>Loading...</div>
+        } else { 
+            const livescoresComponents = this.state.livescores.map(match => 
+                <Livescore key={match.id} match={match} />
+            )
+            return(
+                <div>
+                    {livescoresComponents}
+                </div>
+            );
+        }
     }
 }
 

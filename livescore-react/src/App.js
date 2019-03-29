@@ -5,6 +5,7 @@ import Navbar from "./components/navbar-component/Navbar";
 import Livescores from "./components/livescores-table/Livescores";
 import Fixtures from "./components/fixtures-component/Fixtures";
 import History from "./components/history-component/History";
+import Leagues from "./components/leagues-component/Leagues";
 import './App.css';
 
 class App extends Component {
@@ -12,12 +13,19 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Navbar />
-        <Switch>
-          <Route path="/" component={Livescores} exact/>
-          <Route path="/history" component={History} />
-          <Route path="/fixtures" component={Fixtures} />
-          {/* <Route component={Error} /> */}
-        </Switch>
+        <div className="main">
+          <div className='leagues'>
+            <Leagues />
+          </div>
+          <div className="page">
+            <Switch >
+              <Route path="/" component={Livescores} exact/>
+              <Route path="/history" component={History} />
+              <Route path="/fixtures" component={Fixtures} />
+              {/* <Route component={Error} /> */}
+          </Switch>
+          </div>
+        </div>
       </BrowserRouter>
     );
   }

@@ -23,14 +23,18 @@ class Fixtures extends React.Component {
     
     
     render(){
-        const fixturesComponents = this.state.fixtures.map(fixture => 
-            <Fixture key={fixture.id} match={fixture} />
-        )
-        return (
-            <div>
-                {fixturesComponents}
-            </div>
-        );
+        if (!this.state.isLoaded){
+            return <div>Loading...</div>
+        } else {
+            const fixturesComponents = this.state.fixtures.map(fixture => 
+                <Fixture key={fixture.id} match={fixture} />
+            )
+            return (
+                <div>
+                    {fixturesComponents}
+                </div>
+            );
+        }
     }
 }
 

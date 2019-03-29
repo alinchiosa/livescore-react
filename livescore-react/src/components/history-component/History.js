@@ -22,14 +22,19 @@ class History extends React.Component {
     }
 
     render() {
-        const historyGameComponents = this.state.history.map(match => 
-            <HistoryGame key={match.id} match={match} />
-        )
-        return (
-            <div>
-                {historyGameComponents}
-            </div>
-        );
+
+        if (!this.state.isLoaded){
+            return <div>Loading...</div>
+        } else {
+            const historyGameComponents = this.state.history.map(match => 
+                <HistoryGame key={match.id} match={match} />
+            )
+            return (
+                <div>
+                    {historyGameComponents}
+                </div>
+            );
+        }
     }
 }
 
